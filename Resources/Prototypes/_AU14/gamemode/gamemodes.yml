@@ -98,7 +98,7 @@
   components:
   - type: AddJobsRule
     addToShip: true
-    shipFaction: govfor
+    shipFaction: Govfor
     jobs:
       AU14JobGOVFORPlatCo: 1
       AU14JobGOVFORPlatoonCorpsman: 3
@@ -116,8 +116,6 @@
   parent: BaseGameRule
   components:
   - type: AddJobsRule
-    shipFaction: opfor
-    addToShip: true
     jobs:
       AU14JobOpforPlatCo: 1
       AU14JobOpforPlatoonCorpsman: 3

@@ -5,7 +5,10 @@
   description: cm-job-description-weapons-specialist
   setPreference: false
   playTimeTracker: CMJobWeaponsSpecialist
-  requirements: []
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: CMSquad
+    time: 36000 # 10 hours
   ranks:
     RMCRankSergeant:
     - !type:RoleTimeRequirement

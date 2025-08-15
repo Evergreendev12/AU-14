@@ -247,7 +247,6 @@ namespace Content.Server.AU14.Round
                     Options = optionsplatoons,
                     Duration = duration
                 };
-                voteopt.SetInitiatorOrServer(null);
                 var handle = _voteManager.CreateVote(voteopt);
                 handle.OnFinished += (_, args) =>
                 {
@@ -281,7 +280,6 @@ namespace Content.Server.AU14.Round
                     Options = optionsplatoons,
                     Duration = duration
                 };
-                voteopt.SetInitiatorOrServer(null);
                 var handle = _voteManager.CreateVote(voteopt);
                 handle.OnFinished += (_, args) =>
                 {

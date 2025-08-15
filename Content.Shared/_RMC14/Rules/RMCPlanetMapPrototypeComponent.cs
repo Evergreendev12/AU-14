@@ -84,9 +84,6 @@ public sealed partial class RMCPlanetMapPrototypeComponent : Component
 
     [DataField("votename")]
     public string? VoteName  = String.Empty;
-
-    [DataField("faction")]
-    public string? Faction  = String.Empty;
 }
 
 [DataDefinition]

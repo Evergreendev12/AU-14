@@ -5,7 +5,10 @@
   description: cm-job-description-maint-tech
   setPreference: false
   playTimeTracker: CMJobMaintTech
-  requirements: []
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: CMSquad
+    time: 7200 # 2 hours
   startingGear: CMGearMaintTech
   icon: "CMJobIconMaintTech"
   joinNotifyCrew: false

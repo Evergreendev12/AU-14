@@ -4,7 +4,10 @@
   name: cm-job-name-liaison
   description: cm-job-description-liaison
   setPreference: false
-  requirements: []
+  requirements:
+  - !type:TotalDepartmentsTimeRequirement
+    group: CMDepartmentsHuman
+    time: 36000 # 10 hours
   ranks:
     RMCRankWeYaExecutiveSpecialist:
     - !type:RoleTimeRequirement

@@ -4,7 +4,13 @@
   name: cm-job-name-staff-officer
   description: cm-job-description-staff-officer
   playTimeTracker: CMJobStaffOfficer
-  requirements: []
+  requirements:
+  - !type:RoleTimeRequirement
+    role: CMJobSquadLeader
+    time: 18000 # 5 hours
+  - !type:TotalDepartmentsTimeRequirement
+    group: CMDepartmentsHuman
+    time: 54000 # 15 hours
   ranks:
     RMCRankFirstLT:
     - !type:RoleTimeRequirement

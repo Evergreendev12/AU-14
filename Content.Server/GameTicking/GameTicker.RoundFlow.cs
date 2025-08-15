@@ -99,7 +99,7 @@ namespace Content.Server.GameTicking
 
             var maps = new List<GameMapPrototype>();
 
-            // Check for voted planet from AuRoundSystem
+                // Check for voted planet from AuRoundSystem
             var auRoundSystem = EntitySystem.Get<Content.Server.AU14.Round.AuRoundSystem>();
             var selectedPlanet = auRoundSystem?.GetSelectedPlanet();
             if (selectedPlanet != null)
@@ -172,46 +172,7 @@ namespace Content.Server.GameTicking
                             EntityManager.AddComponent<Content.Shared._RMC14.Rules.RMCPlanetComponent>(mapEntity);
                         if (!EntityManager.HasComponent<TacticalMapComponent>((EntityUid)mapEntity))
                             EntityManager.AddComponent<TacticalMapComponent>(mapEntity);
-                    }
-                }
-            }
 
-            // --- AU14 SHIP SPAWNING LOGIC ---
-            // After planet map is loaded, spawn selected ships for govfor and opfor
-            if (auRoundSystem != null)
-            {
-                var govforShipId = auRoundSystem.GetSelectedGovforShip();
-                if (!string.IsNullOrEmpty(govforShipId) && _prototypeManager.TryIndex<GameMapPrototype>(govforShipId, out var govforShipProto))
-                {
-                    var govforGrids = LoadGameMap(govforShipProto, out var _, new DeserializationOptions { InitializeMaps = true });
-                    foreach (var grid in govforGrids)
-                    {
-                        if (!EntityManager.HasComponent<Content.Server.AU14.Round.ShipFactionComponent>(grid))
-                        {
-                            var comp = EntityManager.AddComponent<Content.Server.AU14.Round.ShipFactionComponent>(grid);
-                            comp.Faction = "govfor";
-                        }
-                        if (!EntityManager.HasComponent<Content.Server.Station.Components.BecomesStationComponent>(grid))
-                        {
-                            EntityManager.AddComponent<Content.Server.Station.Components.BecomesStationComponent>(grid);
-                        }
-                    }
-                }
-                var opforShipId = auRoundSystem.GetSelectedOpforShip();
-                if (!string.IsNullOrEmpty(opforShipId) && _prototypeManager.TryIndex<GameMapPrototype>(opforShipId, out var opforShipProto))
-                {
-                    var opforGrids = LoadGameMap(opforShipProto, out var _, new DeserializationOptions { InitializeMaps = true });
-                    foreach (var grid in opforGrids)
-                    {
-                        if (!EntityManager.HasComponent<Content.Server.AU14.Round.ShipFactionComponent>(grid))
-                        {
-                            var comp = EntityManager.AddComponent<Content.Server.AU14.Round.ShipFactionComponent>(grid);
-                            comp.Faction = "opfor";
-                        }
-                        if (!EntityManager.HasComponent<Content.Server.Station.Components.BecomesStationComponent>(grid))
-                        {
-                            EntityManager.AddComponent<Content.Server.Station.Components.BecomesStationComponent>(grid);
-                        }
                     }
                 }
             }

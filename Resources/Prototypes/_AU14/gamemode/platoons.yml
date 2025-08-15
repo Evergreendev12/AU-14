@@ -40,8 +40,6 @@
 - type: platoon
   id: UPP
   name: UPP Platoon
-  reqlist: UPPBasic
-  language: russian
   VendorToMarker:
     Rifleman: AU14USCMequipmentvendor
     Corpsman: AU14USCMcorpsmanvendor
@@ -55,13 +53,15 @@
     - Riptide
   jobClassOverride:
     SquadRifleman: RMCSPPRifleman
-    DSPilot: RMCSPPPilot
     SquadAutomaticRifleman: AU14JobCivilianColonyAdministrator
-  jobSlotOverride:
-    SquadRifleman: 12
-    PlatoonCorpsman: 1
-    PlatoonCommander: 1
-    DSPilot: 1
+  jobSlotOverrideGovfor:
+    AU14JobGOVFORSquadRifleman: 16
+    AU14JobGOVFORPlatoonCorpsman: 2
+    AU14JobGOVFORPlatCo: 1
+  jobSlotOverrideOpfor:
+    AU14JobOpforSquadRifleman: 12
+    AU14JobOpforPlatoonCorpsman: 1
+    AU14JobOpforPlatCo: 1
 
 
 - type: platoon

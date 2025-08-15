@@ -10,6 +10,6 @@ namespace Content.Server.AU14.Round
     {
         [DataField("faction")]
         public string? Faction { get; set; }
-
     }
 }
+

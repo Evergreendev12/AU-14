@@ -39,7 +39,6 @@
     <Folder Include="AU14\Round\Colony\" />
     <Folder Include="AU14\Round\Utility\" />
     <Folder Include="JobTitleChanger\" />
-    <Folder Include="_RMC14\Power\Commands\" />
   </ItemGroup>
 
 

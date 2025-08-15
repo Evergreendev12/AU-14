@@ -4,13 +4,11 @@ namespace Content.Shared.AU14.util
     {
         SquadAutomaticRifleman,
         PlatoonCorpsman,
-        DCC,
         PlatoonCommander,
         RadioTelephoneOperator,
         SectionSergeant,
-        PlatOp,
         SquadRifleman,
-        DSPilot,
+        Pilot,
         OperationsOfficer,
 
     }

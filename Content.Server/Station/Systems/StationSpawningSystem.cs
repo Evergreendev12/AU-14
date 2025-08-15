@@ -97,14 +97,22 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             if (!string.IsNullOrEmpty(jobId))
             {
                 PlatoonPrototype? platoon = null;
+                PlatoonJobClass? jobClass = null;
+                Dictionary<ProtoId<JobPrototype>, int>? slotOverride = null;
                 if (jobId.Contains("GOVFOR", StringComparison.OrdinalIgnoreCase))
                 {
                     platoon = _platoonSpawnRuleSystem.SelectedGovforPlatoon;
+                    slotOverride = platoon?.JobSlotOverrideGovfor;
                 }
                 else if (jobId.Contains("Opfor", StringComparison.OrdinalIgnoreCase) || jobId.Contains("OPFOR", StringComparison.OrdinalIgnoreCase))
                 {
                     platoon = _platoonSpawnRuleSystem.SelectedOpforPlatoon;
+                    slotOverride = platoon?.JobSlotOverrideOpfor;
                 }
+
+                // Only allow jobs in slotOverride if present
+                if (slotOverride != null && slotOverride.Count > 0 && !slotOverride.ContainsKey(job ?? string.Empty))
+                    return EntityUid.Invalid;
 
                 // --- JobClassOverride logic: match by suffix ---
                 if (platoon != null && platoon.JobClassOverride != null)

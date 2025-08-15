@@ -18,12 +18,6 @@ namespace Content.Server.AU14.VendorMarker
         [DataField("opfor")]
         public bool Opfor { get; set; } = false;
 
-
-
-        [DataField("ship")]
-        public bool Ship { get; set; } = false;
-
-
         // Platoon marker classes
         // Use shared enum from Content.Shared.AU14
 
