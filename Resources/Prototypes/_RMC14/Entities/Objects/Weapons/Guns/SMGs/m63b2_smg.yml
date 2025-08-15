@@ -63,7 +63,6 @@
   - type: AttachableHolder
     slots:
       rmc-aslot-barrel:
-        startingAttachable: RMCAttachmentExtendedBarrel
         whitelist:
           tags:
           - RMCAttachmentBarrelCharger
@@ -72,7 +71,6 @@
           - RMCAttachmentSuppressor
           - RMCM5Bayonet
       rmc-aslot-rail:
-        startingAttachable: RMCAttachmentMagneticHarness
         whitelist:
           tags:
           - RMCAttachmentRailFlashlight
@@ -81,14 +79,13 @@
           - RMCAttachmentS6ReflexSight
           - RMCAttachmentS42xTelescopicMiniscope
       rmc-aslot-stock:
-        startingAttachable: RMCAttachmentM63Stock
+        startingAttachable: RMCAttachmentM63StockCollapsible
         whitelist:
           tags:
           - RMCAttachmentM63ArmBrace
           - RMCAttachmentM63Stock
           - RMCAttachmentM63StockCollapsible
       rmc-aslot-underbarrel:
-        startingAttachable: RMCAttachmentAngledGrip
         whitelist:
           tags:
           - RMCAttachmentAngledGrip

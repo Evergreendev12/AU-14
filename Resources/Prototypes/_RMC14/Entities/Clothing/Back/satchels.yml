@@ -710,8 +710,8 @@
 - type: entity
   parent: CMSatchel
   id: RMCSatchelTSEPA
-  name: TSP-4 police pack
-  description: A TSEPA standard-issue Three Suns Pack MK4.
+  name: UPE-4 police pack
+  description: A Neroid Sector Policing Authority standard-issue Pack.
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Clothing/Back/Satchels/TSE/tsepa_standard.rsi

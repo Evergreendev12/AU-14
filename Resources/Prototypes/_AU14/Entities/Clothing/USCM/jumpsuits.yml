@@ -6,6 +6,10 @@
   components:
   - type: Sprite
     sprite: _AU14/Clothing/desertfatigues.rsi
+  - type: UniformAccessoryHolder
+    startingAccessories:
+    - AU14PatchUAFlag
+    - AU14PatchUSCM
 
 - type: entity
   parent: [RMCMarineUniformBase, RMCAlternateFoldableUniformBase]
@@ -15,6 +19,10 @@
   components:
   - type: Sprite
     sprite: _AU14/Clothing/junglefatigues.rsi
+  - type: UniformAccessoryHolder
+    startingAccessories:
+    - AU14PatchUAFlag
+    - AU14PatchUSCM
 
 - type: entity
   parent: [RMCMarineUniformBase, RMCAlternateFoldableUniformBase]
@@ -24,6 +32,10 @@
   components:
   - type: Sprite
     sprite: _AU14/Clothing/snowfatigues.rsi
+  - type: UniformAccessoryHolder
+    startingAccessories:
+    - AU14PatchUAFlag
+    - AU14PatchUSCM
 
 - type: entity
   parent: [RMCMarineUniformBase, RMCAlternateFoldableUniformBase]
@@ -33,6 +45,10 @@
   components:
   - type: Sprite
     sprite: _AU14/Clothing/mixedsnowfatigues.rsi
+  - type: UniformAccessoryHolder
+    startingAccessories:
+    - AU14PatchUAFlag
+    - AU14PatchUSCM
 
 - type: entity
   parent: [RMCMarineUniformBase, RMCAlternateFoldableUniformBase]
@@ -60,6 +76,8 @@
   components:
   - type: Sprite
     sprite: _AU14/Clothing/Civilian/Uniforms/kahkiboilersuit.rsi
+  - type: UniformAccessoryHolder
+    startingAccessories: [ AU14PatchUAFlag ]
 
 - type: entity
   parent: [RMCMarineUniformBase, RMCAlternateFoldableUniformBase]
@@ -69,6 +87,10 @@
   components:
   - type: Sprite
     sprite: _AU14/Clothing/junglefatigues.rsi
+  - type: UniformAccessoryHolder
+    startingAccessories:
+    - AU14PatchUAFlag
+    - AU14PatchUSASF
 
 - type: entity
   parent: [RMCMarineUniformBase, RMCAlternateFoldableUniformBase]
